@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sistem Perhitungan Bonus Karyawan"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+    <EditText
+        android:id="@+id/masaKerja"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Masa Kerja"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/black"
+        android:padding="15dp"/>
+    <EditText
+        android:textColor="@android:color/black"
+        android:id="@+id/jumlahGaji"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/masaKerja"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Jumlah Gaji"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_margin="10dp"
+        android:padding="15dp"/>
+    <Button
+        android:id="@+id/hitungBonus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/jumlahGaji"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="15dp"
+        android:text="Hitung Bonus"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:padding="15dp"
+        android:textColor="@android:color/white"/>
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/hitungBonus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:text="Bonus yang didapat"
+        android:layout_margin="15dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
